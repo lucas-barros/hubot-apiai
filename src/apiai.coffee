@@ -64,7 +64,7 @@ module.exports = (robot) ->
                     response.result.metadata.intentName + ", " +
                     util.inspect(response.result.parameters))
         # Emit event with message context and parameters
-        robot.emit response.result.metadata.intentName, msg, response.result.parameters
+        robot.emit response.result.metadata.intentName, msg, response.result
       else
         # Default or small talk
         if (response.result.fulfillment.speech?)
